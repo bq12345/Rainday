@@ -1,0 +1,40 @@
+
+.clearfix:after {
+	background-color: #333333;
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.image_grid {
+	float:left;
+	overflow:hidden;
+	width:100%;
+	position:relative;
+	margin-top:40px;
+}
+.image_grid li{
+	float: left;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 17px;
+	color: #686f74;
+	list-style:none;
+	overflow:hidden;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom:1px;
+	margin-right:1px;
+	
+}
+
+.da-thumbs:after
+{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+
+

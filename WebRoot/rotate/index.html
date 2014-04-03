@@ -1,0 +1,76 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>
+#main{
+background: #444;
+}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+
+<title>立方体旋转</title>
+</head>
+
+<body>
+	<div id="main" >
+		<script>
+			var camera, scene, renderer;
+			var geometry, material, mesh;
+			init();
+			var speedX,speedY;
+			animate();
+
+			function init() {
+				//镜头属性
+				camera = new THREE.PerspectiveCamera(75, window.innerWidth
+						/ window.innerHeight, 1, 10000);
+				camera.position.z = 1000;
+				scene = new THREE.Scene();
+				var pointLight = new THREE.PointLight(0x00FFAA);
+				pointLight.position.x = 100;
+				pointLight.position.y = 500;
+				pointLight.position.z = 130;
+				geometry = new THREE.CubeGeometry(600, 600, 600);
+				material = new THREE.MeshBasicMaterial({
+					color : 0xff0000,
+					wireframe : true,
+					transparent : true,
+					opacity : 0.8,
+					map : THREE.ImageUtils.loadTexture("logo.jpg"),
+				});
+				mesh = new THREE.Mesh(geometry, material);
+				scene.add(mesh);
+				scene.add(pointLight);
+				renderer = new THREE.CanvasRenderer();
+				renderer.setSize(window.innerWidth - 100,
+						window.innerHeight - 100);
+				document.body.appendChild(renderer.domElement);
+				document.addEventListener('mousemove', onMouseMove, false);
+				document.addEventListener('click', onMouseClick, false);
+				speedX=0.02;speedY=0.02;
+			}
+			
+			function animate() {
+				// note: three.js includes requestAnimationFrame shim
+				requestAnimationFrame(animate);
+				mesh.rotation.x += speedX;
+				mesh.rotation.y +=speedY;
+				renderer.render(scene, camera);
+			}
+			function onMouseMove(event) {
+			mouseX = event.clientX;
+			mouseY = event.clientY;
+			speedX=0.002;speedY=0.002;
+			animate();
+		}
+			function onMouseClick(event) {
+			window.location.reload(); 
+		}
+		</script>
+	</div>
+</body>
+</html>

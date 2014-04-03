@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>欢迎您的光临</title>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/quicksand.css" />
+<link rel="stylesheet" type="text/css" href="css/hoverdir.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+/* 对本页的H3字号设置，针对图片上的H3 */
+h3 {
+	color: #efe;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.1em;
+	margin-bottom: 10px;
+}
+</style>
+<!-- END CSS -->
+<!-- JAVASCRIPT -->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.modernizr.min.js"></script>
+<script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+<script type="text/javascript">
+//Image Hover
+jQuery(document).ready(function(){
+jQuery(function() {
+	jQuery('#list > li').hoverdir();
+});
+});
+</script>
+
+<script type="text/javascript">
+	function query() {
+		var query = document.getElementById('queryName').value;
+		window.location.href = 'fullTextSearch?name=' + query;
+	}
+</script>
+
+<!-- END JAVASCRIPT -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+
+	<div class="header">
+		<!-- HEADER -->
+		<div class="container_12">
+			<div class="grid_3">
+
+				<div class="logo">
+					<!-- LOGO -->
+					<a href="index.html"><img src="logo.png" alt="" /> </a>
+				</div>
+			</div>
+			<!-- END LOGO -->
+		</div>
+
+	</div>
+	<!-- END HEADER -->
+	<div class="main">
+		<!-- MAIN -->
+		<div class="container_12">
+	<!-- Portfolio Start -->	
+    <div id="portfolio_4col" class="image_grid">
+    <ul id="list" class="da-thumbs">
+        <li data-id="id-1" class="logo">
+            <img src="image/img4.jpg" alt="img" />
+            <div>
+            	<a href="rotate/index.html" target="_blank">
+                <h3>立方体旋转</h3>
+                <p>这里展示一个旋转的人像，当鼠标移动时会加快速度，点击时刷新</p>
+                </a>
+            </div>
+        </li>
+        <li data-id="id-2" class="logo">
+            <img src="image/img3.jpg" alt="img" />
+            <div>
+            	<a href="rainday/index.html" target="_blank">
+                <h3>Rainday</h3>
+                <p>模仿雨滴滴在玻璃上，逐渐增加，会比较消耗CPU</p>
+                </a>
+            </div>
+        </li>
+        <li data-id="id-3" class="logo">
+            <img src="image/img1.jpg" alt="img" />
+            <div>
+            	<a href="particular/index.html" target="_blank">
+                <h3>粒子穿梭</h3>
+                <p>粒子由里向外穿梭，移动鼠标变慢，点击鼠标显现图像并且自动刷新</p>
+                </a>
+            </div>
+        </li>
+        <li data-id="id-4" class="buisness">
+            <img src="image/img2.jpg" alt="img" />
+            <div>
+            	<a href="drawParticular/index.html" target="_blank">
+                <h3>动感画线粒子</h3>
+                <p>自动绘制由粒子组成的曲线，随鼠标指针移动改变</p>
+                </a>
+            </div>
+        </li>
+         <li data-id="id-5" class="buisness">
+            <img src="image/img6.jpg" alt="img" />
+            <div>
+            	<a href="MGA/index.html" target="_blank">
+                <h3>MGA</h3>
+                <p>一个3D机器人</p>
+                </a>
+            </div>
+        </li>
+          <li data-id="id-6" class="buisness">
+            <img src="image/img5.jpg" alt="img" />
+            <div>
+            	<a href="rainParticular/index.html" target="_blank">
+                <h3>下雨粒子</h3>
+                <p>粒子如下雨般闪烁</p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    </div>
+    <!-- Portfolio End -->
+		</div>
+	</div>
+	<!-- END MAIN -->
+	<div class="footer">
+		<!-- FOOTER -->
+		<div class="container_12">
+			<div class="grid_6">
+				<p class="copyright">© Copyright -BaiQiang</p>
+			</div>
+			</div>
+	</div>
+	<!-- END FOOTER -->
+</body>
+</html>
